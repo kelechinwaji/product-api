@@ -1,5 +1,7 @@
 import {Express, Request, Response} from 'express';
 import { CreateUserHandler } from '../controller/user.controller';
+import validate from '../middleware/validation';
+import { createUserSchema } from '../schema/user.schema';
 
 const routes = (app: Express)=>{
   app.get('/healthcheck', (req:Request, res: Response)=>{
@@ -9,7 +11,7 @@ const routes = (app: Express)=>{
     })
   })
 
-  app.post("/api/users", CreateUserHandler)
+  app.post("/api/users",validate(createUserSchema), CreateUserHandler)
 }
 
-export default routes;
+export default routes; 

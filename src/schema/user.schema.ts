@@ -20,5 +20,5 @@ export const createUserSchema = object({
 });
 
 
-//interface for inputs
-export type createUserInput = TypeOf<typeof createUserSchema>
+//interface for user inputs
+export type createUserInput = Omit<TypeOf<typeof createUserSchema>,"body.passwordConfirmation">;

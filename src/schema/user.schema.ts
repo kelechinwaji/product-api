@@ -1,5 +1,7 @@
-import {object, string} from "zod"
+import { type } from "os";
+import {object, string, TypeOf} from "zod"
 
+//validation schema requirement for creating a new user
 export const createUserSchema = object({
     body: object({
        name: string({
@@ -16,3 +18,7 @@ export const createUserSchema = object({
     }),
    
 });
+
+
+//interface for inputs
+export type createUserInput = TypeOf<typeof createUserSchema>

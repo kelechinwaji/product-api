@@ -9,10 +9,10 @@ export const createUserSchema = object({
        }),
        password: string({
         required_error: "Password is required"
-       }).min(6, "Password too short - should be 6 chars minimum").max(8, "Password too long - should be 8 chars maximum"),
-       passwordConfirmantion: string({required_error: "passwordConfirmation is required"}),
+       }).min(6, "Password too short - should be 6 chars minimum"),
+       passwordConfirmation: string({required_error: "passwordConfirmation is required"}),
        email: string({required_error: "Email is required"}).email("not a valid email")
-    }).refine((data)=> data.password === data.passwordConfirmantion, {
+    }).refine((data)=> data.password === data.passwordConfirmation, {
         message: "password do not match",
         path: ["passwordConfirmation"],
     }),

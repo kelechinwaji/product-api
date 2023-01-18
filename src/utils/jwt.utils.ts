@@ -8,7 +8,7 @@ export const signJwt = (object: object, options?: jwt.SignOptions | undefined)=>
  return jwt.sign(object, privateKey, {
     ...(options && options),
     algorithm: "RS256"
- })
+ });
 }
 
 export const verifyJwt = (token: string)=>{

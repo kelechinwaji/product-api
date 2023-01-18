@@ -30,4 +30,9 @@ export const createUserSessionHandler = async (req:Request, res:Response)=>{
         {expiresIn: config.get<string>("accessTokenTtl") });
 
     //return access and refresh token
+    return res.json({
+        status: true,
+        accessToken: accessToken,
+        refreshToken: refreshToken,
+    })
 }

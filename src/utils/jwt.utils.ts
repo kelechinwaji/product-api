@@ -10,3 +10,19 @@ const signJwt = (object: object, options?: jwt.SignOptions | undefined)=>{
     algorithm: "RS256"
  })
 }
+
+const verifyJwt = (token: string)=>{
+ try {
+    const decoded = jwt.verify(token, publicKey);
+    return {
+        valid: true, 
+        expired: false, 
+        decoded}
+ } catch (error: any) {
+    return {
+        valid: false, 
+        expired: error.message === 'JWT expired', 
+        decoded: null
+    }
+ }
+}

@@ -2,6 +2,8 @@ export default {
     port: 1337,
     dbUri: "mongodb://localhost:27017/product-api",
     salt: 15,
+    accessTokenTtl: '10',
+    refreshTokenTtl: "1y",
     publicKey: `-----BEGIN PUBLIC KEY-----
     MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMxYX6783v1v7j2ex18A2etTV0NGTx/8
     u8j3hGhexB+Af8n/a67vJ10Z8g+mS+iQug8iE/7dk/vnbjp1Wju4sL8CAwEAAQ==

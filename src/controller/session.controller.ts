@@ -36,3 +36,7 @@ export const createUserSessionHandler = async (req:Request, res:Response)=>{
         refreshToken: refreshToken,
     })
 }
+
+export const getUserSessionHandler = async (req:Request, res:Response)=>{
+
+}

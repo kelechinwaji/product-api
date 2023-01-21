@@ -15,6 +15,7 @@ const routes = (app: Express)=>{
 
   app.post("/api/users",validate(createUserSchema), CreateUserHandler);
   app.post("/api/sessions",validate(createSessionSchema), createUserSessionHandler);
+  app.get("/api/sessions")
 }
 
 export default routes; 

@@ -7,12 +7,12 @@ import deserializeUser from './middleware/deserializeUser';
 
 
 
-const port = config.get<number>("port")
+const port = config.get<number>("port");
 
-const app = express()
+const app = express();
 
-app.use(express.json())
-app.use(deserializeUser)
+app.use(express.json());
+app.use(deserializeUser);
 
 app.listen(port, async ()=>{
     log.info(`App is running on http://localhost:${port}`);

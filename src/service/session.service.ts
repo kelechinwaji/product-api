@@ -10,6 +10,6 @@ export const createSession = async (userId: string, userAgent: string)=>{
 
 //queries the Db to find the session
 //lean function would return the plain object
-export const findSession = (query: FilterQuery<SchemaDocument>)=>{
+export const findSessions = (query: FilterQuery<SchemaDocument>)=>{
   return SessionModel.find(query).lean
 }

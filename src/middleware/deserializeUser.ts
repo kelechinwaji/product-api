@@ -12,7 +12,7 @@ const deserializeUser = (req:Request, res:Response, next:NextFunction)=>{
     }
 
     const {decoded, expired} = verifyJwt(accessToken)
-console.log(decoded, "decoded");
+
 
     if(decoded){
         res.locals.user = decoded;
@@ -22,4 +22,4 @@ console.log(decoded, "decoded");
     return next();
 };
 
-export default deserializeUser;
+export default deserializeUser; 

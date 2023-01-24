@@ -22,7 +22,7 @@ export const updateSession = (query: FilterQuery<SessionDocument>, update: Updat
   return SessionModel.updateOne(query, update);
 }
 
-export const reIssueAccessToken = async({refreshToken,}:{ refreshToken: string})=>{
+export const reIssueAccessToken = async({refreshToken}:{refreshToken: string})=>{
   const {decoded} = verifyJwt(refreshToken);
 
   if(!decoded || !get(decoded, "_id")) return false;

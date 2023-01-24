@@ -45,7 +45,7 @@ export const getUserSessionsHandler = async (req:Request, res:Response)=>{
  return res.send(sessions)
 }
 
-export const DeleteUserSessionsHandler = async (req:Request, res:Response)=>{
+export const deleteUserSessionsHandler = async (req:Request, res:Response)=>{
     const sessionId = res.locals.user.sessions;
 
     await updateSession({_id: sessionId}, {valid: false})

@@ -40,11 +40,17 @@ export const createUserSessionHandler = async (req:Request, res:Response)=>{
 export const getUserSessionsHandler = async (req:Request, res:Response)=>{
  const userId = res.locals.user._id;
 
- 
  const sessions = await findSessions({user: userId, valid: true})
 
-
- 
-
  return res.send(sessions)
+}
+
+export const DeleteUserSessionsHandler = async (req:Request, res:Response)=>{
+    const sessionId = res.locals.user.sessions;
+
+    return res.send({
+        status: true,
+        accessToken: null,
+        refreshToken: null,
+    })
 }

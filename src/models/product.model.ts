@@ -6,8 +6,10 @@ const nanoid = customAlphabet("abcdefghijklmnopqrstuvwxyz0123456789", 10)
 
 export interface SessionDocument extends mongoose.Document{
     user: UserDocument["_id"],
-    valid: boolean,
-    userAgent: string,
+    title: string,
+    description: string,
+    price: string,
+    image: string,
     createdAt: Date,
     updatedAt: Date,
    

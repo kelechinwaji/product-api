@@ -12,3 +12,7 @@ export const findProduct = (query: FilterQuery<ProductDocument>, options: QueryO
 export const findAndUpdateProduct = (query:FilterQuery<ProductDocument>, update: UpdateQuery<ProductDocument>, options: QueryOptions )=>{
  return ProductModel.findOneAndUpdate(query, update, options);
 }
+
+export const deleteProduct = (query:FilterQuery<ProductDocument> )=>{
+ return ProductModel.deleteOne(query);
+}

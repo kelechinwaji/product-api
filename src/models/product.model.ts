@@ -1,5 +1,8 @@
 import mongoose from "mongoose";
+import {customAlphabet} from "nanoid"
 import { UserDocument } from "./user.model";
+
+const nanoid = customAlphabet("abcdefghijklmnopqrstuvwxyz0123456789", 10)
 
 export interface SessionDocument extends mongoose.Document{
     user: UserDocument["_id"],

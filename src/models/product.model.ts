@@ -4,7 +4,7 @@ import { UserDocument } from "./user.model";
 
 const nanoid = customAlphabet("abcdefghijklmnopqrstuvwxyz0123456789", 10)
 
-export interface SessionDocument extends mongoose.Document{
+export interface ProductDocument extends mongoose.Document{
     user: UserDocument["_id"],
     title: string,
     description: string,
@@ -15,13 +15,25 @@ export interface SessionDocument extends mongoose.Document{
    
 }
 
-const sessionSchema  = new mongoose.Schema({
+const productSchema  = new mongoose.Schema({
+    productId:{
+        type: String,
+        required: true,
+        unique: true,
+        default: () => `product_${nanoid()}`,
+    },
     user: {type: mongoose.Schema.Types.ObjectId, ref: "User" },
-    valid: {type: Boolean, default: true},
-    userAgent: {type: String}
-});
+    title: {type: String, required: true},
+    description: {type: String, required: true},
+    price: {type: String, required: true},
+    image: {type: String, required: true},
+},
+{
+    timestamps: true,
+}
+);
 
 
-const SessionModel = mongoose.model<SessionDocument>("Session", sessionSchema);
+const ProductModel = mongoose.model<ProductDocument>("Product", productSchema);
 
-export default SessionModel;
+export default ProductModel;

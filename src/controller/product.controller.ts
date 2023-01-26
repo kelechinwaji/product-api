@@ -21,7 +21,24 @@ export const createProductHandler =async (req:Request<{}, {}, CreateProductInput
 }
 
 export const getProductHandler =async (req:Request<UpdateProductInput["params"]>, res:Response)=>{
-   
+   try {
+    const productId = req.params.productId;
+    const product = await findProduct({productId});
+
+    if(!product){
+        return res.sendStatus(404);
+    }
+
+    return res.json({
+        status: true,
+        data: product
+    })
+   } catch (error) {
+    return res.json({
+        status: true,
+        data: error
+    })
+   }
   
 }
 

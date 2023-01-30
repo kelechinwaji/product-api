@@ -1,10 +1,10 @@
 import {Express, Request, Response} from 'express';
-import { createProductHandler, updateProductHandler } from '../controller/product.controller';
+import { createProductHandler, getProductHandler, updateProductHandler } from '../controller/product.controller';
 import { createUserSessionHandler, deleteUserSessionsHandler, getUserSessionsHandler } from '../controller/session.controller';
 import { CreateUserHandler } from '../controller/user.controller';
 import requireUser from '../middleware/requireUser';
 import validate from '../middleware/validation';
-import { createProductSchema, updateProductSchema } from '../schema/product.Schema';
+import { createProductSchema, getProductSchema, updateProductSchema } from '../schema/product.Schema';
 import { createSessionSchema } from '../schema/session.schema';
 import { createUserSchema } from '../schema/user.schema';
 
@@ -26,6 +26,7 @@ const routes = (app: Express)=>{
   //Product routes
    app.post("/api/products", [requireUser, validate(createProductSchema)], createProductHandler);
    app.put("/api/products", [requireUser, validate(updateProductSchema)], updateProductHandler)
+   app.get("/api/products",  validate(getProductSchema), getProductHandler)
 }
 
 export default routes; 

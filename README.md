@@ -15,3 +15,7 @@ The Product-api provides the following Endpoints:
 5. Update users Product
 5. Delete users Product.
 
+## USEAGE
+
+- To create a user, an email, password and name is entered. This image shows the interface.
+![po1](https://user-images.githubusercontent.com/78841792/220401323-3549a68c-3c76-4140-8835-a3e95e888173.jpeg)

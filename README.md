@@ -19,3 +19,6 @@ The Product-api provides the following Endpoints:
 
 - To create a user, an email, password and name is entered. This image shows the interface.
 ![po1](https://user-images.githubusercontent.com/78841792/220401323-3549a68c-3c76-4140-8835-a3e95e888173.jpeg)
+
+- To Login to your account, pass in your email and password. 
+![po2](https://user-images.githubusercontent.com/78841792/220402615-f51d4cb2-3e35-4aed-9bbe-4912fb9852a0.jpeg)

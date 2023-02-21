@@ -28,3 +28,10 @@ The Product-api provides the following Endpoints:
 
 - To delete product
 ![po4](https://user-images.githubusercontent.com/78841792/220406204-d0973b47-2a8f-4add-899d-fcdffbb24475.jpeg)
+
+## What I learnt on this project
+- How to implement Jasonwebtoken for authentication
+- How to work with mongoDB Database
+- How to use typescript interface
+- How to Omit data from a payload
+

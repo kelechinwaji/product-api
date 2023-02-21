@@ -22,3 +22,6 @@ The Product-api provides the following Endpoints:
 
 - To Login to your account, pass in your email and password. 
 ![po2](https://user-images.githubusercontent.com/78841792/220402615-f51d4cb2-3e35-4aed-9bbe-4912fb9852a0.jpeg)
+
+- To create a product, pass in the required data.
+![po3](https://user-images.githubusercontent.com/78841792/220405222-0af98b30-20f5-4007-8ff8-bc567761b8a7.jpeg)

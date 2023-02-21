@@ -25,3 +25,6 @@ The Product-api provides the following Endpoints:
 
 - To create a product, pass in the required data.
 ![po3](https://user-images.githubusercontent.com/78841792/220405222-0af98b30-20f5-4007-8ff8-bc567761b8a7.jpeg)
+
+- To delete product
+![po4](https://user-images.githubusercontent.com/78841792/220406204-d0973b47-2a8f-4add-899d-fcdffbb24475.jpeg)

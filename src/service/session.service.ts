@@ -15,7 +15,7 @@ export const createSession = async (userId: string, userAgent: string)=>{
 //queries the Db to find the session
 //lean function would return the plain object
 export const findSessions = (query: FilterQuery<SessionDocument>)=>{
-  return SessionModel.find(query).lean
+  return SessionModel.find(query).lean();
 }
 
 export const updateSession = (query: FilterQuery<SessionDocument>, update: UpdateQuery<SessionDocument>)=>{
